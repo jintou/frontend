@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('billynApp')
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/pc/settings', '/pc/settings/profile');
     $urlRouterProvider.when('/pc/account', '/pc/account/home');
 
@@ -16,10 +16,10 @@ angular.module('billynApp')
         url: '/logout?referrer',
         referrer: 'login',
         template: '',
-        controller: function($state, Auth) {
+        controller: function ($state, Auth) {
           var referrer = $state.params.referrer ||
-                          $state.current.referrer ||
-                          'login';
+            $state.current.referrer ||
+            'login';
           Auth.logout();
           $state.go(referrer);
         }
@@ -30,28 +30,35 @@ angular.module('billynApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
+      .state('resetpassword', {
+        url: '/resetpassword',
+        templateUrl: 'app/account/resetpassword/requestpasswordreset.html',
+        controller: 'RequestResetPasswordController',
+        controllerAs: 'vm'
+      })
+
       .state('pc.account', {
         url: '/account',
         template: '<div ui-view=""></div>',
         //controller: 'AccountController',
         //controllerAs: 'vm',
-        ncyBreadcrumb: {label:'个人空间'},
+        ncyBreadcrumb: { label: '个人空间' },
         authenticate: true
       })
       .state('pc.account.home', {
-          url: '/home',
-          templateUrl: 'components/blyn/core/dash/view/listMessage.html',
-          controller: 'ListMessageController',
-          controllerAs: 'listMessage',
-          ncyBreadcrumb: {skip:true},
-          authenticate: true
+        url: '/home',
+        templateUrl: 'components/blyn/core/dash/view/listMessage.html',
+        controller: 'ListMessageController',
+        controllerAs: 'listMessage',
+        ncyBreadcrumb: { skip: true },
+        authenticate: true
       })
       .state('pc.account.profile', {
         url: '/profile',
         templateUrl: 'app/account/settings/profile.html',
         controller: 'ProfileController',
         controllerAs: 'vm',
-        ncyBreadcrumb: {label:'设置账号'},
+        ncyBreadcrumb: { label: '设置账号' },
         authenticate: true
       })
       .state('pc.account.finance', {
@@ -59,7 +66,7 @@ angular.module('billynApp')
         templateUrl: 'app/account/finance/views/home.html',
         controller: 'MyFinanceController',
         controllerAs: 'vm',
-        ncyBreadcrumb: {label:'金融账户'},
+        ncyBreadcrumb: { label: '金融账户' },
         authenticate: true
       })
       .state('pc.account.trade', {
@@ -67,13 +74,13 @@ angular.module('billynApp')
         templateUrl: 'app/account/trade/views/home.html',
         controller: 'MyTradeController',
         controllerAs: 'vm',
-        ncyBreadcrumb: {label:'我的交易'},
+        ncyBreadcrumb: { label: '我的交易' },
         authenticate: true
       })
       .state('pc.account.changePassword', {
         url: '/changepassword',
         templateUrl: 'app/account/settings/changePassword.html',
-        ncyBreadcrumb: {label:'修改密码'},
+        ncyBreadcrumb: { label: '修改密码' },
         authenticate: true
       })
       .state('mobile.profile', {
@@ -84,8 +91,8 @@ angular.module('billynApp')
         authenticate: true
       });
   })
-  .run(function($rootScope) {
-    $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
+  .run(function ($rootScope) {
+    $rootScope.$on('$stateChangeStart', function (event, next, nextParams, current) {
       if (next.name === 'logout' && current && current.name && !current.authenticate) {
         next.referrer = current.name;
       }

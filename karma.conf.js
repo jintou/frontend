@@ -30,6 +30,7 @@ module.exports = function(config) {
       'client/bower_components/AngularJS-Toaster/toaster.js',
       'client/bower_components/angular-smart-table/dist/smart-table.js',
       'client/bower_components/angular-modal-service/dst/angular-modal-service.js',
+      'client/bower_components/ng-dialog/js/ngDialog.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',
