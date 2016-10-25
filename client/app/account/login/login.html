@@ -23,7 +23,7 @@
     </div>
     <div class="login-body">
       <div class="col-md-offset-6 col-lg-offset-7 col-xs-12 col-sm-12 col-md-6 col-lg-5">
-        <div class="login-panel">            
+        <div class="login-panel">
           <div class="login-box">
             <h1>{{'LOGIN_PAGE.USERLOGIN'|translate}}</h1>
             <form class="form login-form" name="form" ng-submit="vm.login(form)" novalidate>
@@ -63,6 +63,10 @@
             </form>
             <p style="margin: 10px 0 0 0; text-align: right;">
               {{'LOGIN_PAGE.NEWUSER'|translate}}？ <a class="btn btn-default" ui-sref="signup">{{'LOGIN_PAGE.SIGNUP'|translate}}</a>
+            </p>
+
+            <p style="margin: 10px 0 0 0; text-align: right;">
+                <a class="btn btn-default" ui-sref="resetpassword"> Reset Password</a>
             </p>
           </div>
           <p style="margin: 5px; text-align: center;">{{'LOGIN_PAGE.SOCIALMEDIALOGIN'|translate}}</p>

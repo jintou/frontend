@@ -79,7 +79,8 @@ angular.module('billynApp', [
   'angularModalService',
   'pascalprecht.translate',
   'toaster',
-  'ngAnimate'
+  'ngAnimate',
+  'ngDialog'
 ])
   .config(function ($urlRouterProvider, $locationProvider, $translateProvider) {
     $urlRouterProvider.otherwise('/');
