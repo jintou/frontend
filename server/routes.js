@@ -24,9 +24,10 @@ export default function(app) {
   app.use('/api/collabs', require('./api/collab'));
   app.use('/api/vouchers', require('./api/voucher'));
   app.use('/api/moneys', require('./api/money'));
-  
+
   app.use('/auth', require('./auth'));
-  
+  app.use('/requestresetpassword', require('./resetpassword'));
+
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);

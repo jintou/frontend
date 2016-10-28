@@ -17,5 +17,7 @@ router.use('/local', require('./local'));
 router.use('/facebook', require('./facebook'));
 router.use('/twitter', require('./twitter'));
 router.use('/google', require('./google'));
+router.use('/google', require('./google'));
+
 
 export default router;

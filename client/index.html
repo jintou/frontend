@@ -23,6 +23,8 @@
       <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
       <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
       <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+      <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
+      <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -43,7 +45,7 @@
       <!-- endinjector -->
     <!-- endbuild -->
 
-    
+
   </head>
   <body ng-app="billynApp">
     <!--[if lt IE 7]>
@@ -88,6 +90,7 @@
       <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
       <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
       <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
+      <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -103,6 +106,7 @@
       <script src="components/blyn/nuts/voucher/voucher.module.js"></script>
       <script src="components/util/util.module.js"></script>
       <script src="components/blyn/core/user/blyn.user.js"></script>
+      <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/app.directives.js"></script>
@@ -115,7 +119,7 @@
       <script src="components/blyn/core/app/app.service.js"></script>
       <script src="components/blyn/core/app/bilyn.app.controller.js"></script>
       <script src="components/blyn/core/app/bilyn.app.js"></script>
-      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/resetpassword/requestpasswordreset.controller.js"></script>
       <script src="components/blyn/core/circle/circle.controllers.js"></script>
       <script src="components/blyn/core/circle/circle.router.js"></script>
       <script src="components/blyn/core/circle/circle.service.js"></script>
@@ -141,15 +145,15 @@
       <script src="components/blyn/core/user/blyn.user.controllers.js"></script>
       <script src="app/account/finance/controllers.js"></script>
       <script src="components/blyn/core/user/blyn.user.service.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
       <script src="app/account/signup/signup.controller.js"></script>
-      <script src="app/account/signup/signup.directive.js"></script>
       <script src="components/blyn/nuts/money/controllers.js"></script>
       <script src="components/blyn/nuts/money/module.js"></script>
       <script src="components/blyn/nuts/money/services.js"></script>
       <script src="components/blyn/nuts/order/controllers.js"></script>
       <script src="components/blyn/nuts/order/module.js"></script>
       <script src="components/blyn/nuts/order/services.js"></script>
-      <script src="app/account/trade/controllers.js"></script>
+      <script src="app/account/signup/signup.directive.js"></script>
       <script src="components/blyn/nuts/point/point.service.js"></script>
       <script src="components/blyn/nuts/price/controllers.js"></script>
       <script src="components/blyn/nuts/price/module.js"></script>
@@ -166,7 +170,7 @@
       <script src="components/blyn/nuts/timeslot/timeslot.service.js"></script>
       <script src="components/blyn/nuts/voucher/bilyn.voucher.controller.js"></script>
       <script src="components/blyn/nuts/voucher/bilyn.voucher.js"></script>
-      <script src="app/admin/admin.controller.js"></script>
+      <script src="app/account/trade/controllers.js"></script>
       <script src="components/blyn/nuts/voucher/voucher.service.js"></script>
       <script src="components/blyn/nuts/wechat/blyn.weChat.controllers.js"></script>
       <script src="components/blyn/nuts/wechat/blyn.weChat.router.js"></script>
@@ -183,7 +187,7 @@
       <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>
-      <script src="app/account/account.js"></script>
+      <script src="app/admin/admin.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->

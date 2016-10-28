@@ -30,8 +30,8 @@ angular.module('billynApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
-      .state('resetpassword', {
-        url: '/resetpassword',
+      .state('requestresetpassword', {
+        url: '/requestresetpassword',
         templateUrl: 'app/account/resetpassword/requestpasswordreset.html',
         controller: 'RequestResetPasswordController',
         controllerAs: 'vm'

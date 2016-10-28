@@ -1,16 +1,29 @@
 'use strict';
 
-class RequestResetPasswordController{
-   constructor(ngDialog){
-       this.email = '';
-       this.ngDialog = ngDialog;
-   };
+class RequestResetPasswordController {
+  constructor($http, ngDialog) {
+    this.email = '';
+    this.ngDialog = ngDialog;
+    this.$http = $http;
+  };
 
-   submit(){
-      this.ngDialog.open({template: '<p>An Email will send to your to reset yout password</p>',
-              plain: true,
-      className: 'ngdialog-theme-default' });
-   };
+  submit() {
+    var vm = this;
+
+    vm.$http({
+      method: 'POST',
+      url: 'http://localhost:9000/requestresetpassword',
+      data: { email: this.email }
+    }).then(function (response) {
+      vm.ngDialog.open({
+        template: response.data,
+        plain: true,
+        className: 'ngdialog-theme-default'
+    });
+
+    });
+
+  };
 }
 
 

@@ -63,6 +63,9 @@ module.exports = function (sequelize, DataTypes) {
         notEmpty: true
       }
     },
+    tempPassword: {
+      type: DataTypes.STRING,
+    },
     description: DataTypes.STRING,
     provider: DataTypes.STRING,
     salt: DataTypes.STRING,
